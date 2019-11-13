@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loftly Analytics</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light bg-light">
+        <span class="navbar-brand mb-0 h1">Loftry Analytics</span>
+    </nav>
+
+    <div class="container">
+        <br>
+        <p class="text-justify text-wrap font-weight-bold">
+            Thank you for using the Loftry platform and for helping us improve it.
+            Our project is dedicated to making finding housing, moving and socializing
+            easier for everyone! 🦄
+        </p>
+        <form id="root-form" action="/analytics-log" method="POST">
+            <div class="form-group">
+                <label for="Email1">Please enter your email address.</label>
+                <input name="email" type="email" class="form-control" id="Email1" placeholder="name@example.com">
+            </div>
+            <div class="form-group">
+                <label for="School1">Which school do you attend?</label>
+                <input name="school" type="text" class="form-control" id="School1" placeholder="De Anza College">
+            </div>
+            <div class="form-group">
+                <label for="Experience1">Rate your experience.</label>
+                <select name="experience_number" class="form-control" id="Experience1">
+                    <option>1 (very bad)</option>
+                    <option>2 (bad)</option>
+                    <option>3 (usable)</option>
+                    <option selected>4 (good)</option>
+                    <option>5 (amazing)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Experience2">Why did you rate your experience that way?</label>
+                <textarea name="experience_paragraph" class="form-control" id="Experience2" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="Improve1">Are there any things that could improve the living experience for you?</label>
+                <textarea name="how_to_improve" class="form-control" id="Improve1" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="Interview1">Would you be open to potentially being interviewed?</label>
+                <select name="interview_ready" class="form-control" id="Interview1">
+                    <option selected>Yes</option>
+                    <option>No</option>
+                </select>
+            </div>
+            <input class="btn btn-primary float-right" type="submit" value="Submit Form">
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+    <script src="{{ url_for('static', filename='js/validation.js') }}"></script>
+
+</body>
+
+</html>
